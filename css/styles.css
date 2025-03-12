@@ -1,0 +1,403 @@
+/* 基础样式 */
+:root {
+    --primary-color: #1e50a2;
+    --secondary-color: #3a7bd5;
+    --accent-color: #00b4ff;
+    --dark-bg: #0a192f;
+    --darker-bg: #05101f;
+    --text-color: #ffffff;
+    --text-secondary: #b0b0b0;
+    --transition: all 0.3s ease;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: var(--dark-bg);
+    color: var(--text-color);
+    line-height: 1.6;
+    overflow-x: hidden;
+}
+
+.bg-darker {
+    background-color: var(--darker-bg);
+}
+
+/* 霓虹效果修改为更简洁的高亮效果 */
+.neon-text {
+    color: var(--accent-color);
+    text-shadow: 0 0 5px rgba(0, 180, 255, 0.5);
+}
+
+.neon-text-subtle {
+    color: var(--accent-color);
+    text-shadow: none;
+}
+
+@keyframes neon-pulse {
+    from {
+        text-shadow: 0 0 2px rgba(0, 180, 255, 0.3);
+    }
+    to {
+        text-shadow: 0 0 5px rgba(0, 180, 255, 0.5);
+    }
+}
+
+.neon-button {
+    background: var(--primary-color);
+    border: none;
+    color: var(--text-color);
+    box-shadow: 0 0 10px rgba(30, 80, 162, 0.5);
+    transition: var(--transition);
+}
+
+.neon-button:hover {
+    background-color: var(--secondary-color);
+    color: var(--text-color);
+    box-shadow: 0 0 15px rgba(58, 123, 213, 0.7);
+}
+
+/* 分隔线 */
+.divider {
+    height: 3px;
+    width: 60px;
+    background: linear-gradient(90deg, var(--primary-color), var(--secondary-color));
+    margin-bottom: 30px;
+    border-radius: 3px;
+}
+
+/* 导航栏 */
+.navbar {
+    background-color: rgba(10, 25, 47, 0.95);
+    backdrop-filter: blur(10px);
+    padding: 15px 0;
+    transition: var(--transition);
+}
+
+/* 其余导航栏样式保持不变 */
+
+/* 英雄区 */
+.hero-section {
+    height: 100vh;
+    position: relative;
+    display: flex;
+    align-items: center;
+    background-color: var(--dark-bg);
+    overflow: hidden;
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+}
+
+.hero-title {
+    font-size: 3.5rem;
+    font-weight: 700;
+    margin-bottom: 1.5rem;
+    line-height: 1.2;
+}
+
+.hero-title .highlight {
+    color: var(--accent-color);
+    position: relative;
+}
+
+.hero-subtitle {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+    color: var(--text-secondary);
+}
+
+.particle-network {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 50%;
+    height: 100%;
+    z-index: 1;
+}
+
+.typed-cursor {
+    color: var(--accent-color);
+}
+
+.hero-buttons {
+    margin-top: 2rem;
+}
+
+.hero-buttons .btn {
+    margin-right: 1rem;
+    padding: 0.75rem 1.5rem;
+    border-radius: 4px;
+    font-weight: 500;
+}
+
+/* 修改原有的大脑动画为点状网络 */
+.brain-animation {
+    position: relative;
+    height: 100%;
+    width: 100%;
+}
+
+.neural-network {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 1;
+}
+
+.hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, rgba(10, 25, 47, 0.9) 0%, rgba(5, 16, 31, 0.8) 100%);
+    z-index: -1;
+}
+
+.brain-image {
+    border: 2px solid var(--accent-color);
+    box-shadow: 0 0 15px rgba(0, 180, 255, 0.5);
+    transition: var(--transition);
+}
+
+/* 其余大脑动画样式保持不变 */
+
+/* 服务介绍 */
+.service-card {
+    background-color: rgba(255, 255, 255, 0.03);
+    border-radius: 10px;
+    padding: 30px;
+    height: 100%;
+    transition: var(--transition);
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.service-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+    opacity: 0;
+    z-index: -1;
+    transition: var(--transition);
+}
+
+.service-icon {
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
+    font-size: 2rem;
+    color: var(--text-color);
+}
+
+.service-link {
+    color: var(--accent-color);
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    margin-top: 15px;
+    transition: var(--transition);
+}
+
+/* 案例展示 */
+.case-card {
+    border-radius: 10px;
+    overflow: hidden;
+    background-color: rgba(255, 255, 255, 0.03);
+    height: 100%;
+    transition: var(--transition);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+}
+.case-content{
+    padding: 15px;
+}
+.case-image {
+    position: relative;
+    overflow: hidden;
+    height: 220px; /* 统一图片容器高度 */
+}
+
+.case-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* 确保图片填充整个容器且保持比例 */
+    transition: transform 0.5s ease;
+}
+
+.case-card:hover .case-image img {
+    transform: scale(1.05);
+}
+
+.case-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(10, 25, 47, 0.8);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: var(--transition);
+}
+
+.case-tags span {
+    background: var(--primary-color);
+    color: var(--text-color);
+    font-size: 0.8rem;
+    padding: 3px 10px;
+    border-radius: 20px;
+}
+
+/* 客户评价 */
+.testimonial-card {
+    background-color: rgba(255, 255, 255, 0.03);
+    border-radius: 10px;
+    padding: 25px;
+    height: 100%;
+    transition: var(--transition);
+    border-left: 3px solid var(--accent-color);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.testimonial-avatar {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    margin-right: 15px;
+    border: 2px solid var(--accent-color);
+}
+
+/* 联系我们 */
+.contact-info {
+    padding: 30px;
+    background-color: rgba(255, 255, 255, 0.03);
+    border-radius: 10px;
+    height: 100%;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.contact-item {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 20px;
+}
+
+.contact-item i {
+    width: 40px;
+    height: 40px;
+    background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 15px;
+    color: var(--text-color);
+}
+
+.qrcode-row {
+    margin-top: 30px;
+}
+
+.qrcode-item {
+    text-align: center;
+}
+
+.qrcode-item img {
+    width: 120px;
+    height: 120px;
+    border: 2px solid var(--primary-color);
+    border-radius: 10px;
+    padding: 5px;
+    background-color: #fff;
+}
+
+.qrcode-item p {
+    margin-top: 8px;
+    font-size: 0.9rem;
+    color: var(--text-secondary);
+}
+
+.contact-form {
+    padding: 30px;
+    background-color: rgba(255, 255, 255, 0.03);
+    border-radius: 10px;
+    height: 96%;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.form-control:focus {
+    background-color: rgba(255, 255, 255, 0.1);
+    box-shadow: 0 0 0 3px rgba(30, 80, 162, 0.25);
+    color: var(--text-color);
+}
+
+/* 其余响应式设计保持不变 */
+
+/* 添加全局过渡效果 */
+.service-card, .case-card, .testimonial-card, .nav-link, .btn {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* 悬浮效果 */
+.service-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 20px rgba(0, 180, 255, 0.1);
+}
+
+.case-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 20px rgba(0, 180, 255, 0.1);
+}
+
+.testimonial-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 180, 255, 0.1);
+}
+
+/* 联系表单样式 */
+.contact-form .form-control {
+    background-color: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    color: var(--text-color);
+    padding: 12px 15px;
+}
+
+.contact-form .form-control:focus {
+    background-color: rgba(255, 255, 255, 0.08);
+    border-color: var(--primary-color);
+    box-shadow: 0 0 0 0.2rem rgba(0, 180, 255, 0.25);
+}
+
+.contact-form .form-control::placeholder {
+    color: rgba(255, 255, 255, 0.5);
+}
+
+.contact-form .form-select {
+    background-color: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    color: var(--text-color);
+    padding: 12px 15px;
+}
+
+.contact-form .form-select:focus {
+    background-color: rgba(255, 255, 255, 0.08);
+    border-color: var(--primary-color);
+    box-shadow: 0 0 0 0.2rem rgba(0, 180, 255, 0.25);
+}
