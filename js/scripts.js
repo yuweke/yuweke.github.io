@@ -134,12 +134,12 @@ $(document).ready(function() {
     // 表单提交事件
     $('.contact-form form').submit(function(event) {
         event.preventDefault();
-        
+
         // 这里可以添加表单验证和AJAX提交
         const name = $(this).find('input[type="text"]').val();
-        
+
         // 模拟表单提交成功
-        alert('感谢您的留言，' + name + '！我们会尽快与您联系。');
+        //alert('感谢您的留言，' + name + '！我们会尽快与您联系。');
         $(this)[0].reset();
     });
 

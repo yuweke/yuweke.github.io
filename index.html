@@ -3,410 +3,473 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>微克科技 - 智能科技解决方案提供商</title>
+    <title>鱼微科技 - 智能科技解决方案提供商</title>
     <!-- Bootstrap CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/bootstrap.min.css" rel="stylesheet">
     <!-- Font Awesome -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="css/all.min.css">
     <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/fonts.css">
     <!-- 自定义CSS -->
     <link rel="stylesheet" href="css/styles.css">
-    
+
     <!-- Typed.js -->
-    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
-    
+    <script src="js/typed.min.js"></script>
+
     <!-- Particles.js -->
-    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+    <script src="js/particles.min.js"></script>
+
+    <!-- EmailJS 用于邮件发送 -->
+    <script src="js/email.min.js"></script>
 </head>
+
 <body data-bs-spy="scroll" data-bs-target="#navbar" data-bs-offset="100">
-    <!-- 导航栏 -->
-    <nav id="navbar" class="navbar navbar-expand-lg navbar-dark fixed-top">
-        <div class="container">
-            <a class="navbar-brand neon-text" href="#">
-                <span class="fw-bold" style="font-size: 28px;">微克<span style="color: aliceblue;">科技</span</span>
-            </a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav ms-auto">
-                    <li class="nav-item">
-                        <a class="nav-link" href="#home">首页</a>
-                    </li>
-                   
-                    <li class="nav-item">
-                        <a class="nav-link" href="#services">服务介绍</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#cases">案例展示</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#testimonials">客户评价</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#contact">联系我们</a>
-                    </li>
-                </ul>
+<!-- 导航栏 -->
+<nav id="navbar" class="navbar navbar-expand-lg navbar-dark fixed-top">
+    <div class="container">
+        <a class="navbar-brand neon-text" href="#">
+            <span class="fw-bold" style="font-size: 28px;">鱼微<span style="color: aliceblue;">科技</span></span>
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ms-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="#home">首页</a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="#services">服务介绍</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#cases">案例展示</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#testimonials">客户评价</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#contact">联系我们</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<!-- 首页 -->
+<section id="home" class="hero-section">
+    <div class="container h-100">
+        <div class="row h-100 align-items-center">
+            <div class="col-lg-6">
+                <div class="hero-content">
+                    <h1 class="hero-title">
+                        <span class="typed-element"></span>
+                        <span class="highlight">解决方案</span>
+                    </h1>
+                    <p class="hero-subtitle">专注于AI解决方案、Web端管理系统、小程序与公众号开发、UI/UX设计</p>
+                    <div class="hero-buttons">
+                        <a href="#services" class="btn btn-primary neon-button">了解服务</a>
+                        <a href="#contact" class="btn btn-outline-light">联系我们</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-6">
+                <div class="particle-network" id="particles-js"></div>
             </div>
         </div>
-    </nav>
+    </div>
+</section>
 
-    <!-- 首页 -->
-    <section id="home" class="hero-section">
-        <div class="container h-100">
-            <div class="row h-100 align-items-center">
-                <div class="col-lg-6">
-                    <div class="hero-content">
-                        <h1 class="hero-title">
-                            <span class="typed-element"></span>
-                            <span class="highlight">解决方案</span>
-                        </h1>
-                        <p class="hero-subtitle">专注于AI解决方案、Web端管理系统、小程序与公众号开发、UI/UX设计</p>
-                        <div class="hero-buttons">
-                            <a href="#services" class="btn btn-primary neon-button">了解服务</a>
-                            <a href="#contact" class="btn btn-outline-light">联系我们</a>
-                        </div>
+
+<!-- 服务介绍 -->
+<section id="services" class="py-5 bg-darker">
+    <div class="container">
+        <div class="section-header text-center mb-5">
+            <h2 class="display-5 fw-bold neon-text-subtle">服务介绍</h2>
+            <div class="divider mx-auto"></div>
+        </div>
+        <div class="row g-4">
+            <div class="col-md-6 col-lg-3">
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-robot"></i>
                     </div>
+                    <h4>AI解决方案</h4>
+                    <p>定制化AI模型开发、机器学习应用、智能数据分析、自然语言处理等解决方案。</p>
+                    <a href="#" class="service-link">了解更多 <i class="fas fa-arrow-right"></i></a>
                 </div>
-                <div class="col-lg-6">
-                    <div class="particle-network" id="particles-js"></div>
+            </div>
+            <div class="col-md-6 col-lg-3">
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-desktop"></i>
+                    </div>
+                    <h4>Web端管理系统</h4>
+                    <p>企业级管理系统开发、SaaS平台构建、数据可视化、云服务集成等解决方案。</p>
+                    <a href="#" class="service-link">了解更多 <i class="fas fa-arrow-right"></i></a>
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-3">
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-mobile-alt"></i>
+                    </div>
+                    <h4>小程序与公众号</h4>
+                    <p>微信小程序开发、公众号运营、H5应用、移动端解决方案等服务。</p>
+                    <a href="#" class="service-link">了解更多 <i class="fas fa-arrow-right"></i></a>
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-3">
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-paint-brush"></i>
+                    </div>
+                    <h4>UI/UX设计</h4>
+                    <p>用户体验设计、界面设计、品牌视觉设计、交互设计等专业服务。</p>
+                    <a href="#" class="service-link">了解更多 <i class="fas fa-arrow-right"></i></a>
                 </div>
             </div>
         </div>
-    </section>
+    </div>
+</section>
 
-
-    <!-- 服务介绍 -->
-    <section id="services" class="py-5 bg-darker">
-        <div class="container">
-            <div class="section-header text-center mb-5">
-                <h2 class="display-5 fw-bold neon-text-subtle">服务介绍</h2>
-                <div class="divider mx-auto"></div>
-            </div>
-            <div class="row g-4">
-                <div class="col-md-6 col-lg-3">
-                    <div class="service-card">
-                        <div class="service-icon">
-                            <i class="fas fa-robot"></i>
-                        </div>
-                        <h4>AI解决方案</h4>
-                        <p>定制化AI模型开发、机器学习应用、智能数据分析、自然语言处理等解决方案。</p>
-                        <a href="#" class="service-link">了解更多 <i class="fas fa-arrow-right"></i></a>
-                    </div>
-                </div>
-                <div class="col-md-6 col-lg-3">
-                    <div class="service-card">
-                        <div class="service-icon">
-                            <i class="fas fa-desktop"></i>
-                        </div>
-                        <h4>Web端管理系统</h4>
-                        <p>企业级管理系统开发、SaaS平台构建、数据可视化、云服务集成等解决方案。</p>
-                        <a href="#" class="service-link">了解更多 <i class="fas fa-arrow-right"></i></a>
-                    </div>
-                </div>
-                <div class="col-md-6 col-lg-3">
-                    <div class="service-card">
-                        <div class="service-icon">
-                            <i class="fas fa-mobile-alt"></i>
-                        </div>
-                        <h4>小程序与公众号</h4>
-                        <p>微信小程序开发、公众号运营、H5应用、移动端解决方案等服务。</p>
-                        <a href="#" class="service-link">了解更多 <i class="fas fa-arrow-right"></i></a>
-                    </div>
-                </div>
-                <div class="col-md-6 col-lg-3">
-                    <div class="service-card">
-                        <div class="service-icon">
-                            <i class="fas fa-paint-brush"></i>
-                        </div>
-                        <h4>UI/UX设计</h4>
-                        <p>用户体验设计、界面设计、品牌视觉设计、交互设计等专业服务。</p>
-                        <a href="#" class="service-link">了解更多 <i class="fas fa-arrow-right"></i></a>
-                    </div>
-                </div>
-            </div>
+<!-- 案例展示 -->
+<section id="cases" class="py-5">
+    <div class="container">
+        <div class="section-header text-center mb-5">
+            <h2 class="display-5 fw-bold neon-text-subtle">案例展示</h2>
+            <div class="divider mx-auto"></div>
         </div>
-    </section>
-
-    <!-- 案例展示 -->
-    <section id="cases" class="py-5">
-        <div class="container">
-            <div class="section-header text-center mb-5">
-                <h2 class="display-5 fw-bold neon-text-subtle">案例展示</h2>
-                <div class="divider mx-auto"></div>
-            </div>
-            <div class="row g-4">
-                <div class="col-md-6 col-lg-4">
-                    <div class="case-card">
-                        <div class="case-image">
-                            <img src="https://images.unsplash.com/photo-1531746790731-6c087fecd65a?ixlib=rb-1.2.1&auto=format&fit=crop&w=600&h=400&q=80" alt="AI智能助手" class="img-fluid">
-                            <div class="case-overlay">
-                                <a href="#" class="btn btn-outline-light">查看详情</a>
-                            </div>
-                        </div>
-                        <div class="case-content">
-                            <h4>智能客服系统</h4>
-                            <p>基于NLP技术的智能客服解决方案，提升客户服务效率。</p>
-                            <div class="case-tags">
-                                <span>AI</span>
-                                <span>NLP</span>
-                                <span>客服系统</span>
-                            </div>
+        <div class="row g-4">
+            <div class="col-md-6 col-lg-4">
+                <div class="case-card">
+                    <div class="case-image">
+                        <img src="images/cases/ai-assistant.jpg" alt="AI智能助手" class="img-fluid">
+                        <div class="case-overlay">
+                            <a href="#" class="btn btn-outline-light">查看详情</a>
                         </div>
                     </div>
-                </div>
-                <div class="col-md-6 col-lg-4">
-                    <div class="case-card">
-                        <div class="case-image">
-                            <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?ixlib=rb-1.2.1&auto=format&fit=crop&w=600&h=400&q=80" alt="企业管理系统" class="img-fluid">
-                            <div class="case-overlay">
-                                <a href="#" class="btn btn-outline-light">查看详情</a>
-                            </div>
-                        </div>
-                        <div class="case-content">
-                            <h4>企业资源管理平台</h4>
-                            <p>一站式企业资源管理系统，优化业务流程，提升运营效率。</p>
-                            <div class="case-tags">
-                                <span>ERP</span>
-                                <span>Web系统</span>
-                                <span>数据分析</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-6 col-lg-4">
-                    <div class="case-card">
-                        <div class="case-image">
-                            <img src="https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?ixlib=rb-1.2.1&auto=format&fit=crop&w=600&h=400&q=80" alt="电商小程序" class="img-fluid">
-                            <div class="case-overlay">
-                                <a href="#" class="btn btn-outline-light">查看详情</a>
-                            </div>
-                        </div>
-                        <div class="case-content">
-                            <h4>新零售电商平台</h4>
-                            <p>融合线上线下的新零售电商解决方案，提升用户购物体验。</p>
-                            <div class="case-tags">
-                                <span>小程序</span>
-                                <span>电商</span>
-                                <span>新零售</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-6 col-lg-4">
-                    <div class="case-card">
-                        <div class="case-image">
-                            <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-1.2.1&auto=format&fit=crop&w=600&h=400&q=80" alt="数据分析平台" class="img-fluid">
-                            <div class="case-overlay">
-                                <a href="#" class="btn btn-outline-light">查看详情</a>
-                            </div>
-                        </div>
-                        <div class="case-content">
-                            <h4>数据分析平台</h4>
-                            <p>基于大数据的智能分析平台，助力企业决策。</p>
-                            <div class="case-tags">
-                                <span>大数据</span>
-                                <span>数据可视化</span>
-                                <span>BI</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-6 col-lg-4">
-                    <div class="case-card">
-                        <div class="case-image">
-                            <img src="https://images.unsplash.com/photo-1558346490-a72e53ae2d4f?ixlib=rb-1.2.1&auto=format&fit=crop&w=600&h=400&q=80" alt="智慧园区系统" class="img-fluid">
-                            <div class="case-overlay">
-                                <a href="#" class="btn btn-outline-light">查看详情</a>
-                            </div>
-                        </div>
-                        <div class="case-content">
-                            <h4>智慧园区系统</h4>
-                            <p>融合IoT技术的智慧园区管理解决方案。</p>
-                            <div class="case-tags">
-                                <span>IoT</span>
-                                <span>智慧园区</span>
-                                <span>管理系统</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-6 col-lg-4">
-                    <div class="case-card">
-                        <div class="case-image">
-                            <img src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?ixlib=rb-1.2.1&auto=format&fit=crop&w=600&h=400&q=80" alt="教育平台" class="img-fluid">
-                            <div class="case-overlay">
-                                <a href="#" class="btn btn-outline-light">查看详情</a>
-                            </div>
-                        </div>
-                        <div class="case-content">
-                            <h4>在线教育平台</h4>
-                            <p>智能化在线教育解决方案，提升学习体验。</p>
-                            <div class="case-tags">
-                                <span>教育</span>
-                                <span>在线学习</span>
-                                <span>直播</span>
-                            </div>
+                    <div class="case-content">
+                        <h4>智能客服系统</h4>
+                        <p>基于NLP技术的智能客服解决方案，提升客户服务效率。</p>
+                        <div class="case-tags">
+                            <span>AI</span>
+                            <span>NLP</span>
+                            <span>客服系统</span>
                         </div>
                     </div>
                 </div>
             </div>
-            <div class="text-center mt-5">
-                <a href="#" class="btn btn-outline-primary btn-lg">查看更多案例</a>
-            </div>
-        </div>
-    </section>
-
-    <!-- 客户评价 -->
-    <section id="testimonials" class="py-5 bg-darker">
-        <div class="container">
-            <div class="section-header text-center mb-5">
-                <h2 class="display-5 fw-bold neon-text-subtle">客户评价</h2>
-                <div class="divider mx-auto"></div>
-            </div>
-            <div class="testimonial-slider">
-                <div class="row">
-                    <div class="col-md-4 mb-4">
-                        <div class="testimonial-card">
-                            <div class="testimonial-content">
-                                <p>"微克科技的AI解决方案帮助我们大幅提升了客户服务效率，智能客服系统准确率高达95%，极大减轻了人工客服的压力。"</p>
-                            </div>
-                            <div class="testimonial-info">
-                                <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="客户头像" class="testimonial-avatar">
-                                <div>
-                                    <h5>张先生</h5>
-                                    <p class="mb-0">某科技公司 CEO</p>
-                                </div>
-                            </div>
+            <div class="col-md-6 col-lg-4">
+                <div class="case-card">
+                    <div class="case-image">
+                        <img src="images/cases/erp-system.jpg" alt="企业管理系统" class="img-fluid">
+                        <div class="case-overlay">
+                            <a href="#" class="btn btn-outline-light">查看详情</a>
                         </div>
                     </div>
-                    <div class="col-md-4 mb-4">
-                        <div class="testimonial-card">
-                            <div class="testimonial-content">
-                                <p>"微克科技团队的专业素养和技术能力令人印象深刻。他们为我们开发的管理系统极大提升了我们的运营效率，值得信赖的合作伙伴！"</p>
-                            </div>
-                            <div class="testimonial-info">
-                                <img src="https://randomuser.me/api/portraits/women/44.jpg" alt="客户头像" class="testimonial-avatar">
-                                <div>
-                                    <h5>李女士</h5>
-                                    <p class="mb-0">某教育集团 COO</p>
-                                </div>
-                            </div>
+                    <div class="case-content">
+                        <h4>企业资源管理平台</h4>
+                        <p>一站式企业资源管理系统，优化业务流程，提升运营效率。</p>
+                        <div class="case-tags">
+                            <span>ERP</span>
+                            <span>Web系统</span>
+                            <span>数据分析</span>
                         </div>
                     </div>
-                    <div class="col-md-4 mb-4">
-                        <div class="testimonial-card">
-                            <div class="testimonial-content">
-                                <p>"微克科技开发的小程序上线一个月内就为我们带来了30%的销售增长，用户体验和界面设计都非常出色，超出了我们的预期。"</p>
-                            </div>
-                            <div class="testimonial-info">
-                                <img src="https://randomuser.me/api/portraits/men/67.jpg" alt="客户头像" class="testimonial-avatar">
-                                <div>
-                                    <h5>王先生</h5>
-                                    <p class="mb-0">某零售品牌 市场总监</p>
-                                </div>
-                            </div>
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-4">
+                <div class="case-card">
+                    <div class="case-image">
+                        <img src="images/cases/ecommerce.jpg" alt="电商小程序" class="img-fluid">
+                        <div class="case-overlay">
+                            <a href="#" class="btn btn-outline-light">查看详情</a>
+                        </div>
+                    </div>
+                    <div class="case-content">
+                        <h4>新零售电商平台</h4>
+                        <p>融合线上线下的新零售电商解决方案，提升用户购物体验。</p>
+                        <div class="case-tags">
+                            <span>小程序</span>
+                            <span>电商</span>
+                            <span>新零售</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-4">
+                <div class="case-card">
+                    <div class="case-image">
+                        <img src="images/cases/data-analysis.jpg" alt="数据分析平台" class="img-fluid">
+                        <div class="case-overlay">
+                            <a href="#" class="btn btn-outline-light">查看详情</a>
+                        </div>
+                    </div>
+                    <div class="case-content">
+                        <h4>数据分析平台</h4>
+                        <p>基于大数据的智能分析平台，助力企业决策。</p>
+                        <div class="case-tags">
+                            <span>大数据</span>
+                            <span>数据可视化</span>
+                            <span>BI</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-4">
+                <div class="case-card">
+                    <div class="case-image">
+                        <img src="images/cases/smart-campus.jpg" alt="智慧园区系统" class="img-fluid">
+                        <div class="case-overlay">
+                            <a href="#" class="btn btn-outline-light">查看详情</a>
+                        </div>
+                    </div>
+                    <div class="case-content">
+                        <h4>智慧园区系统</h4>
+                        <p>融合IoT技术的智慧园区管理解决方案。</p>
+                        <div class="case-tags">
+                            <span>IoT</span>
+                            <span>智慧园区</span>
+                            <span>管理系统</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-4">
+                <div class="case-card">
+                    <div class="case-image">
+                        <img src="images/cases/education.jpg" alt="教育平台" class="img-fluid">
+                        <div class="case-overlay">
+                            <a href="#" class="btn btn-outline-light">查看详情</a>
+                        </div>
+                    </div>
+                    <div class="case-content">
+                        <h4>在线教育平台</h4>
+                        <p>智能化在线教育解决方案，提升学习体验。</p>
+                        <div class="case-tags">
+                            <span>教育</span>
+                            <span>在线学习</span>
+                            <span>直播</span>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-    </section>
+        <div class="text-center mt-5">
+            <a href="#" class="btn btn-outline-primary btn-lg">查看更多案例</a>
+        </div>
+    </div>
+</section>
 
-    <!-- 联系我们 -->
-    <section id="contact" class="py-5">
-        <div class="container">
-            <div class="section-header text-center mb-5">
-                <h2 class="display-5 fw-bold neon-text-subtle">联系我们</h2>
-                <div class="divider mx-auto"></div>
-            </div>
+<!-- 客户评价 -->
+<section id="testimonials" class="py-5 bg-darker">
+    <div class="container">
+        <div class="section-header text-center mb-5">
+            <h2 class="display-5 fw-bold neon-text-subtle">客户评价</h2>
+            <div class="divider mx-auto"></div>
+        </div>
+        <div class="testimonial-slider">
             <div class="row">
-                <div class="col-lg-6 mb-4">
-                    <div class="contact-info">
-                        <h3 class="mb-4">联系方式</h3>
-                        <div class="contact-item">
-                            <i class="fas fa-map-marker-alt"></i>
-                            <div>
-                                <h5>地址</h5>
-                                <p>江苏省昆山市开发区景王路142号</p>
-                            </div>
+                <div class="col-md-4 mb-4">
+                    <div class="testimonial-card">
+                        <div class="testimonial-content">
+                            <p>
+                                "鱼微科技的AI解决方案帮助我们大幅提升了客户服务效率，智能客服系统准确率高达95%，极大减轻了人工客服的压力。"</p>
                         </div>
-                        <div class="contact-item">
-                            <i class="fas fa-phone-alt"></i>
+                        <div class="testimonial-info">
+                            <img src="images/testimonials/client1.jpg" alt="客户头像" class="testimonial-avatar">
                             <div>
-                                <h5>电话</h5>
-                                <p>180 5173 8385</p>
-                            </div>
-                        </div>
-                        <div class="contact-item">
-                            <i class="fas fa-envelope"></i>
-                            <div>
-                                <h5>邮箱</h5>
-                                <p>yuweke@126.com</p>
-                            </div>
-                        </div>
-                        
-                        <div class="qrcode-row mt-4">
-                            <h5 class="mb-3">扫码关注</h5>
-                            <div class="d-flex gap-4">
-                                <div class="qrcode-item">
-                                    <img src="images/wx.jpg" alt="微信" class="img-fluid mb-2">
-                                    <p>微信</p>
-                                </div>
-                               
-                               
+                                <h5>张先生</h5>
+                                <p class="mb-0">某科技公司 CEO</p>
                             </div>
                         </div>
                     </div>
                 </div>
-                <div class="col-lg-6">
-                    <div class="contact-form">
-                        <h3 class="mb-4">在线留言</h3>
-                        <form>
-                            <div class="mb-3">
-                                <input type="text" class="form-control" placeholder="您的姓名" required>
+                <div class="col-md-4 mb-4">
+                    <div class="testimonial-card">
+                        <div class="testimonial-content">
+                            <p>
+                                "鱼微科技团队的专业素养和技术能力令人印象深刻。他们为我们开发的管理系统极大提升了我们的运营效率，值得信赖的合作伙伴！"</p>
+                        </div>
+                        <div class="testimonial-info">
+                            <img src="images/testimonials/client2.jpg" alt="客户头像" class="testimonial-avatar">
+                            <div>
+                                <h5>李女士</h5>
+                                <p class="mb-0">某教育集团 COO</p>
                             </div>
-                            <div class="mb-3">
-                                <input type="tel" class="form-control" placeholder="您的电话" required>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="testimonial-card">
+                        <div class="testimonial-content">
+                            <p>
+                                "鱼微科技开发的小程序上线一个月内就为我们带来了30%的销售增长，用户体验和界面设计都非常出色，超出了我们的预期。"</p>
+                        </div>
+                        <div class="testimonial-info">
+                            <img src="images/testimonials/client3.jpg" alt="客户头像" class="testimonial-avatar">
+                            <div>
+                                <h5>王先生</h5>
+                                <p class="mb-0">某零售品牌 市场总监</p>
                             </div>
-                            <div class="mb-3">
-                                <input type="email" class="form-control" placeholder="您的邮箱">
-                            </div>
-                            <div class="mb-3">
-                                <input type="text" class="form-control" placeholder="您感兴趣的服务">
-                            </div>
-                            <div class="mb-3">
-                                <textarea class="form-control" rows="4" placeholder="您的留言" required></textarea>
-                            </div>
-                            <button type="submit" class="btn btn-primary w-100">发送留言</button>
-                        </form>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
-    </section>
+    </div>
+</section>
 
-    <!-- 页脚 -->
-    <footer class="py-4 bg-darker">
-        <div class="container">
-            <div class="row g-4">
-                <div class="text-center">
-                
-                    <p class="footer-text">微克科技是一家专注于AI解决方案、Web端管理系统、小程序与公众号开发、UI/UX设计的创新型科技公司。</p>
+<!-- 联系我们 -->
+<section id="contact" class="py-5">
+    <div class="container">
+        <div class="section-header text-center mb-5">
+            <h2 class="display-5 fw-bold neon-text-subtle">联系我们</h2>
+            <div class="divider mx-auto"></div>
+        </div>
+        <div class="row">
+            <div class="col-lg-6 mb-4">
+                <div class="contact-info">
+                    <h3 class="mb-4">联系方式</h3>
+                    <div class="contact-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <div>
+                            <h5>地址</h5>
+                            <p>江苏省昆山市开发区景王路142号</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-phone-alt"></i>
+                        <div>
+                            <h5>电话</h5>
+                            <p>180 5173 8385</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-envelope"></i>
+                        <div>
+                            <h5>邮箱</h5>
+                            <p>yuweke@126.com</p>
+                        </div>
+                    </div>
+
+                    <div class="qrcode-row mt-4">
+                        <h5 class="mb-3">扫码关注</h5>
+                        <div class="d-flex gap-4">
+                            <div class="qrcode-item">
+                                <img src="images/wx.jpg" alt="微信" class="img-fluid mb-2">
+                                <p>微信</p>
+                            </div>
+
+
+                        </div>
+                    </div>
                 </div>
-            
+            </div>
+            <div class="col-lg-6">
+                <div class="contact-form">
+                    <h3 class="mb-4">在线留言</h3>
+                    <form id="contactForm" onsubmit="return sendEmail(event)">
+                        <div class="mb-3">
+                            <input type="text" class="form-control" id="name" placeholder="您的姓名" required>
+                        </div>
+                        <div class="mb-3">
+                            <input type="tel" class="form-control" id="phone" placeholder="您的电话" required>
+                        </div>
+                        <div class="mb-3">
+                            <input type="email" class="form-control" id="email" placeholder="您的邮箱">
+                        </div>
+                        <div class="mb-3">
+                            <input type="text" class="form-control" id="service" placeholder="您感兴趣的服务">
+                        </div>
+                        <div class="mb-3">
+                            <textarea class="form-control" id="message" rows="4" placeholder="您的留言"
+                                      required></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary w-100">发送留言</button>
+                        <div id="emailStatus" class="mt-3 text-center" style="display: none;"></div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- 页脚 -->
+<footer class="py-4 bg-darker">
+    <div class="container">
+        <div class="row g-4">
+            <div class="text-center">
+
+                <p class="footer-text">
+                    鱼微科技是一家专注于AI解决方案、Web端管理系统、小程序与公众号开发、UI/UX设计的创新型科技公司。</p>
+            </div>
+
             <div class="footer-bottom text-center mt-4">
-                <p class="mb-0">&copy; 微克科技. 保留所有权利.</p>
+                <p class="mb-0">&copy; 鱼微科技. 保留所有权利.</p>
             </div>
         </div>
-    </footer>
+</footer>
 
-    <!-- Bootstrap JS -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
-    <!-- jQuery -->
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <!-- 自定义JS -->
-    <script src="js/scripts.js"></script>
+<!-- Bootstrap JS -->
+<script src="js/bootstrap.bundle.min.js"></script>
+<!-- jQuery -->
+<script src="js/jquery-3.6.0.min.js"></script>
+<!-- 自定义JS -->
+<script src="js/scripts.js"></script>
+
+<!-- 邮件发送功能 -->
+    <script>
+        // 初始化 EmailJS
+        (function() {
+            // 请替换为您的 EmailJS 公钥
+            emailjs.init("xGGnzMBV5pGcc2tSr");
+        })();
+
+        function sendEmail(event) {
+            event.preventDefault();
+
+            // 获取表单数据
+            const name = document.getElementById('name').value;
+            const phone = document.getElementById('phone').value;
+            const email = document.getElementById('email').value || '未提供';
+            const service = document.getElementById('service').value || '未提供';
+            const message = document.getElementById('message').value;
+
+            // 显示发送状态
+            const statusDiv = document.getElementById('emailStatus');
+            statusDiv.style.display = 'block';
+            statusDiv.innerHTML = '<div class="alert alert-info">正在发送邮件，请稍候...</div>';
+
+            // 准备发送的数据
+            const templateParams = {
+                name: name,
+                phone: phone,
+                email: email,
+                service: service,
+                message: message,
+                to_email: 'yuweke@126.com'
+            };
+
+            // 使用 EmailJS 发送邮件
+            emailjs.send('service_o7df2cp', 'template_2d2bv2o', templateParams)
+                .then(function(response) {
+                    console.log('邮件发送成功:', response);
+                    statusDiv.innerHTML = '<div class="alert alert-success">留言已成功发送！我们会尽快与您联系。</div>';
+                    document.getElementById('contactForm').reset();
+
+                    // 5秒后隐藏状态消息
+                    setTimeout(function() {
+                        statusDiv.style.display = 'none';
+                    }, 5000);
+                }, function(error) {
+                    console.log('邮件发送失败:', error);
+                    statusDiv.innerHTML = '<div class="alert alert-danger">发送失败，请稍后再试或直接联系我们。</div>';
+                });
+
+            return false;
+        }
+    </script>
 </body>
 </html>
